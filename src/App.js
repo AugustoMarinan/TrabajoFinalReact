@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ListaTareas from './componentes/ListaTareas';
 import FormTarea from './componentes/FormTarea';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap CSS
+import { Container, Row, Col} from 'react-bootstrap'; // Importa componentes de Bootstrap
 import './App.css';
 
 const App = () => {
@@ -30,16 +32,21 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Gestor de Tareas</h1>
-      <FormTarea onAgregarTarea={handleAgregarTarea} />
-      <ListaTareas
-        tareas={tareas}
-        onCompleteTarea={handleCompletarTarea}
-        onDeleteTarea={handleEliminarTarea}
-      />
-    </div>
+    <Container>
+        <h1>Gestor de Tareas</h1>
+        <FormTarea onAgregarTarea={handleAgregarTarea} />
+      <Row>
+        <Col>
+          <ListaTareas
+            tareas={tareas}
+            onCompleteTarea={handleCompletarTarea}
+            onDeleteTarea={handleEliminarTarea}
+          />
+        </Col>
+      </Row>
+    </Container>
   );
 };
+
 
 export default App;
