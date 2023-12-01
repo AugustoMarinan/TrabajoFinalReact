@@ -21,5 +21,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Deploy de la aplicacion
 
-    Se puede ver una demo en https://trabajo-final-react-mu.vercel.app/
+    Se puede ver una demo de la [Aplicacion] (https://trabajo-final-react-mu.vercel.app/)
 
